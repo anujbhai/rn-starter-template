@@ -1,5 +1,11 @@
 import React from "react";
-import { Text, StyleSheet, View, Button } from "react-native";
+import {
+  Text,
+  StyleSheet,
+  View,
+  Button,
+  TouchableOpacity
+} from "react-native";
 
 const HomeScreen = props => {
   const {navigation} = props;
@@ -20,6 +26,11 @@ const HomeScreen = props => {
         title="Go to images"
         onPress={() => navigation.navigate("Images")}
       />
+      <TouchableOpacity
+        onPress={() => navigation.navigate("Lists")}
+      >
+        <Text style={styles.styledBtn}>Go to lists</Text>
+      </TouchableOpacity>
     </View>
   );
 };
@@ -35,6 +46,10 @@ const styles = StyleSheet.create({
     fontSize: 20,
     marginBottom: 30
   },
+  styledBtn: {
+    textAlign: "center",
+    paddingVertical: 30,
+  }
 });
 
 export default HomeScreen;
