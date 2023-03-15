@@ -26,6 +26,36 @@ const HomeScreen = props => {
         title="Go to images"
         onPress={() => navigation.navigate("Images")}
       />
+
+      <Button
+        title="Go to counter"
+        onPress={() => navigation.navigate("Counter")}
+      />
+
+      <Button
+        title="Go to colors"
+        onPress={() => navigation.navigate("Color")}
+      />
+
+      <Button
+        title="Go to squares"
+        onPress={() => navigation.navigate("Square")}
+      />
+
+      <Button
+        title="Go to squares reducer"
+        onPress={() => navigation.navigate("SquareReducer")}
+      />
+
+      <Button
+        title="Go to counter reducer"
+        onPress={() => navigation.navigate("CounterReducer")}
+      />
+
+      <Button
+        title="Go to text screen"
+        onPress={() => navigation.navigate("Text")}
+      />
       <TouchableOpacity
         onPress={() => navigation.navigate("Lists")}
       >
@@ -37,6 +67,9 @@ const HomeScreen = props => {
 
 const styles = StyleSheet.create({
   container: {
+    flexGrow: 1,
+    flexDirection: "column",
+    justifyContent: "space-around",
     padding: 15
   },
   text: {
